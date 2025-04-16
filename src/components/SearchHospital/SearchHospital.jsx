@@ -80,7 +80,7 @@ function SearchHospital() {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
-        gap: "50px",
+        gap: "25px",
       }}
     >
       <Select

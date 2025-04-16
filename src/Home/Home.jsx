@@ -3,6 +3,8 @@ import HeroComponent from "../components/HeroComponent/HeroComponent";
 import NavBar from "../components/NavBar/NavBar";
 import SearchHospital from "../components/SearchHospital/SearchHospital";
 import HeroServices from "../components/HeroServices/HeroServices";
+import Offers from "../components/Sections/Offers/Offers";
+import Specialization from "../components/Sections/Specialization/Specialization";
 
 function Home() {
   return (
@@ -32,6 +34,10 @@ function Home() {
           </Stack>
         </Container>
       </Box>
+
+      <Offers />
+
+      <Specialization />
     </>
   );
 }

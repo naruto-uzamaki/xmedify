@@ -5,6 +5,8 @@ import SearchHospital from "../components/SearchHospital/SearchHospital";
 import HeroServices from "../components/HeroServices/HeroServices";
 import Offers from "../components/Sections/Offers/Offers";
 import Specialization from "../components/Sections/Specialization/Specialization";
+import Specialists from "../components/Sections/Specialists/Specialists";
+import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
 
 function Home() {
   return (
@@ -38,6 +40,10 @@ function Home() {
       <Offers />
 
       <Specialization />
+
+      <Specialists />
+
+      <PatientCaring />
     </>
   );
 }

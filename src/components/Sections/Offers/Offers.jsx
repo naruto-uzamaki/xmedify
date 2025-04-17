@@ -20,7 +20,7 @@ export default function Offers() {
             clickable: true,
           }}
           autoplay={{
-            delay: 3000, // 3 seconds delay
+            delay: 2000, // 2 seconds delay
             disableOnInteraction: false,
           }}
           breakpoints={{

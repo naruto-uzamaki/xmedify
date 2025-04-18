@@ -1,4 +1,7 @@
 import { useMemo } from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
+import faqBanner from "../../../assets/faqs-banner.jpg";
+import CustomizedAccordions from "../../Accordion/Accordion";
 
 function FAQs() {
   const data = useMemo(
@@ -25,6 +28,30 @@ function FAQs() {
       },
     ],
     []
+  );
+
+  return (
+    <Box py={4}>
+      <Container maxWidth="xl">
+        <Typography color="primary.main" fontWeight={600} textAlign="center">
+          Get Your Answer
+        </Typography>
+        <Typography textAlign="center" variant="h2" mb={2}>
+          Frequently Asked Questions
+        </Typography>
+        <Grid container alignItems="center" spacing={5}>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Box src={faqBanner} component="img" width={1} height="auto" />
+          </Grid>
+
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Box maxWidth={450}>
+              <CustomizedAccordions data={data} />
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }
 

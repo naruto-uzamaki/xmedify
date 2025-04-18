@@ -14,11 +14,7 @@ import tick from "../../../assets/tick-blue.png";
 
 function PatientCaring() {
   return (
-    <Box
-      py={6}
-      sx={{ background: "linear-gradient(#E7F0FF, #E8F1FF)" }}
-      height="100vh"
-    >
+    <Box py={6} sx={{ background: "linear-gradient(#E7F0FF, #E8F1FF)" }}>
       <Stack direction={{ xs: "column", md: "row" }} spacing={25}>
         <Box component="img" src={banner} width={{ xs: "100%", md: "40%" }} />
         <Stack
@@ -26,6 +22,7 @@ function PatientCaring() {
           alignItems="flex-start"
           justifyContent="center"
           width={{ xs: "100%", md: "50%" }}
+          padding={4}
         >
           <Typography fontWeight={600} color="primary.main">
             HELPING PATIENTS FROM AROUND THE GLOBE!!

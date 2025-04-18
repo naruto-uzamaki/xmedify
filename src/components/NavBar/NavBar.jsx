@@ -14,7 +14,7 @@ import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function NavBar() {
+function NavBar() {
   const isMobile = useMediaQuery("(max-width:900px)");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -86,3 +86,4 @@ export default function NavBar() {
     </header>
   );
 }
+export default NavBar;

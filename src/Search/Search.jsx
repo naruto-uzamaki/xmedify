@@ -6,6 +6,8 @@ import { useEffect, useMemo, useState } from "react";
 import HospitalCard from "../components/HospitalCard/HospitalCard";
 import icon from "../assets/tick.png";
 import cta from "../assets/cta.png";
+import BookingModal from "../components/BookingModal/BookingModal";
+import AutohideSnackbar from "../components/AutohideSnackbar/AutohideSnackbar";
 
 function Search() {
   const [searchParams, setSeachParams] = useSearchParams();
@@ -13,7 +15,7 @@ function Search() {
   const [city, setCity] = useState(searchParams.get("city"));
   const [hospitals, setHospitals] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [isModelOpen, setIsModelOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [bookingDetails, setBookingDetails] = useState({});
   const [showBookingSuccess, setShowBookingSuccess] = useState(false);
 
@@ -52,7 +54,7 @@ function Search() {
 
   const handleBookingModal = (details) => {
     setBookingDetails(details);
-    setIsModelOpen(true);
+    setIsModalOpen(true);
   };
 
   const setDescription = () => {
@@ -163,6 +165,20 @@ function Search() {
             sx={{ width: "20%", height: "200px" }}
           ></Box>
         </Stack>
+
+        <BookingModal
+          sx={{ background: "red" }}
+          open={isModalOpen}
+          setOpen={setIsModalOpen}
+          bookingDetails={bookingDetails}
+          showSuccessMessage={setShowBookingSuccess}
+        />
+
+        <AutohideSnackbar
+          open={showBookingSuccess}
+          setOpen={setShowBookingSuccess}
+          message="Booking Successful"
+        />
       </Box>
     </>
   );

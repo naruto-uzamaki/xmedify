@@ -63,7 +63,7 @@ function Search() {
     }
 
     return (
-      <Stack mt={15} px={5}>
+      <Stack mt={15} px={5} mb={5}>
         <Typography
           component="h1"
           fontSize={24}

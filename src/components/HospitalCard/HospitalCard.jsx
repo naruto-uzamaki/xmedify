@@ -18,6 +18,7 @@ function HospitalCard({
       direction={{ xs: "column", md: "row" }}
       sx={{ borderRadius: 2, bgcolor: "#fff", p: { xs: 2, md: 4 } }}
       spacing={4}
+      flexWrap={"wrap"}
     >
       <Box
         component="img"
